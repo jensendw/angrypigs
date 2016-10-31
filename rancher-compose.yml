@@ -1,0 +1,14 @@
+angrypigs-$ENVIRONMENT:
+  scale: 1
+  environment:
+    ENVIRONMENT: $ENVIRONMENT
+  tty: false
+  ports:
+    - 8080/tcp
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: asg_name=rancher-operations-o1
+  image: $IMAGE_NAME
+  upgrade_strategy:
+    start_first: false
+    batch_size: 1

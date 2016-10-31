@@ -8,7 +8,7 @@ angrypigs-$ENVIRONMENT:
   labels:
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: asg_name=rancher-operations-o1
-  image: $IMAGE_NAME
+  image: $DOCKER_IMAGE
   upgrade_strategy:
     start_first: false
     batch_size: 1

@@ -21,4 +21,3 @@ api.add_resource(Default, '/')
 
 if __name__ == '__main__':
     app.run(debug=APP_DEBUG, host='0.0.0.0')
-#################
